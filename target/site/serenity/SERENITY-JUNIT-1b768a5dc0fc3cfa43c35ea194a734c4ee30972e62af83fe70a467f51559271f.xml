@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Registrar Alojamiento" skipped="0" tests="1" time="35.77" timestamp="2022-03-17 03:43:37"><testcase name="Title of your scenario"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+stepdefinitions.AddFavoriteLodgingStepDefinition.ingresaLosDatosDeReservacion(AddFavoriteLodgingStepDefinition.java:19)&#13;
+✽.ingresa los datos de reservacion(file:///C:/Users/juan.marquez/eclipse-workspace/BookingTest/src/test/resources/features/registrarAlojamiento.feature:12)&#13;
+</system-err></testcase></testsuite>

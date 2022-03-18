@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Juan Pablo Test Booking Project</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="5326f3b7664f853cdc08cd99667d904cc7bfeb5807051c125c67cd4b0f6377f4.html">Creacion De Cuenta En Booking</a></span>
+                > <span class="truncate-60"><a
+                    href="e5fa502fd758567de3794b009f29915af6e407815f69d1dda46303c5b5e1e985.html">Crear una cuenta en la pagina de Booking </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-03-2022 08:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Creacion De Cuenta En Booking </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como automatizador<br />
+Quiero vavegar a la pagina de Booking<br />
+Para crear una cuenta y validar su creacion
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Crear una cuenta en la pagina de Booking
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: valor esperado '1TestDevco@gamil.com' no ha sido encontrado - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {'method':'xpath','selector':'//*[@id='profile-menu-trigger--title']'}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>stepdefinitions.CreacionCuentaBookingStepDefinitions.validaElCorreoIngresadoParaLaCreaciNDeLaCuenta(CreacionCuentaBookingStepDefinitions.java:41)<br />✽.Valida el correo ingresado para la creacion de la cuenta "1TestDevco@gamil.com"(file:///C:/Users/juan.marquez/eclipse-workspace/BookingTest/src/test/resources/features/creacionCuentaBooking.feature:10)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource2217949508420788996.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8cc4c53354be69f8a638400514ce91bf7624e19234e9f1db62b225c985fe0a8a.png" title=" Given &quot;Juan&quot; navega a la pagina de Booking" width="1920"/>
+                <img src="8cc4c53354be69f8a638400514ce91bf7624e19234e9f1db62b225c985fe0a8a.png" title=" Juan opens the https://www.booking.com/" width="1920"/>
+                <img src="8cc4c53354be69f8a638400514ce91bf7624e19234e9f1db62b225c985fe0a8a.png" title=" Given &quot;Juan&quot; navega a la pagina de Booking (completed)" width="1920"/>
+                <img src="767eadfa9fc00380ae1aa153ac2cefd9a60d046fd53d2d2c957a5b0536a2aaea.png" title=" When Ingresa al apartado crear cuenta Y introduce un email para la creacion de la cuenta &quot;1TestDevco@gamil.com&quot; y password &quot;1HappyTest1234&quot;" width="1920"/>
+                <img src="767eadfa9fc00380ae1aa153ac2cefd9a60d046fd53d2d2c957a5b0536a2aaea.png" title=" Juan ingresar data creacion cuenta" width="1920"/>
+                <img src="767eadfa9fc00380ae1aa153ac2cefd9a60d046fd53d2d2c957a5b0536a2aaea.png" title=" Juan clicks on Boton para empezar a crear a la cuenta" width="1920"/>
+                <img src="767eadfa9fc00380ae1aa153ac2cefd9a60d046fd53d2d2c957a5b0536a2aaea.png" title=" Juan enters '1TestDevco@gamil.com' into Apartado de texto para introducir un email para creacion de cuenta" width="1920"/>
+                <img src="68878108f694da90c5c31ec449dff22ecf8d25457de75ce48fce34b1a1474099.png" title=" Juan enters '1TestDevco@gamil.com' into Apartado de texto para introducir un email para creacion de cuenta (completed)" width="1920"/>
+                <img src="68878108f694da90c5c31ec449dff22ecf8d25457de75ce48fce34b1a1474099.png" title=" Juan clicks on Boton para continuar con el email introducido" width="1920"/>
+                <img src="2f8a1afeb108cdb89c76f72df83a0df8138dfe117226254d3d6d58cf79976476.png" title=" Juan clicks on Boton para continuar con el email introducido (completed)" width="1920"/>
+                <img src="2f8a1afeb108cdb89c76f72df83a0df8138dfe117226254d3d6d58cf79976476.png" title=" Juan enters '1HappyTest1234' into Campo para introducir la contrase&ntilde;a" width="1920"/>
+                <img src="b04f94a36ccac634d73491feff91b10b384ee3c6b9540435238526465cee0fc4.png" title=" Juan enters '1HappyTest1234' into Campo para introducir la contrase&ntilde;a (completed)" width="1920"/>
+                <img src="b04f94a36ccac634d73491feff91b10b384ee3c6b9540435238526465cee0fc4.png" title=" Juan enters '1HappyTest1234' into Campo para confirmar la contrase&ntilde;a introducida" width="1920"/>
+                <img src="3eb7972f359d7c2bdd16b4aa7a612edc471f2e94367e8979ba883e4bfbf18b7b.png" title=" Juan enters '1HappyTest1234' into Campo para confirmar la contrase&ntilde;a introducida (completed)" width="1920"/>
+                <img src="3eb7972f359d7c2bdd16b4aa7a612edc471f2e94367e8979ba883e4bfbf18b7b.png" title=" Juan clicks on Boton para crear la cuenta con la contrase&ntilde;a especificada" width="1920"/>
+                <img src="5fd701194972d303bcaa99c135f79737bea1ef506d5e45c2bb84e633c8ce7024.png" title=" Juan clicks on Boton para crear la cuenta con la contrase&ntilde;a especificada (completed)" width="1920"/>
+                <img src="5fd701194972d303bcaa99c135f79737bea1ef506d5e45c2bb84e633c8ce7024.png" title=" Juan ingresar data creacion cuenta (completed)" width="1920"/>
+                <img src="5fd701194972d303bcaa99c135f79737bea1ef506d5e45c2bb84e633c8ce7024.png" title=" When Ingresa al apartado crear cuenta Y introduce un email para la creacion de la cuenta &quot;1TestDevco@gamil.com&quot; y password &quot;1HappyTest1234&quot; (completed)" width="1920"/>
+                <img src="5fd701194972d303bcaa99c135f79737bea1ef506d5e45c2bb84e633c8ce7024.png" title=" Then Valida el correo ingresado para la creacion de la cuenta &quot;1TestDevco@gamil.com&quot;" width="1920"/>
+                <img src="814b94c97ffccf5772d11f87e933ad87eda191d568cb55ed3ed9936ef54740a7.png" title=" Then validate text of should be '1TestDevco@gamil.com'" width="1920"/>
+                <img src="131c92efe8cffd02cc668c751e56c7cd525a1e742f9644416c9b0958b70cd4f0.png" title=" Then validate text of should be '1TestDevco@gamil.com' (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

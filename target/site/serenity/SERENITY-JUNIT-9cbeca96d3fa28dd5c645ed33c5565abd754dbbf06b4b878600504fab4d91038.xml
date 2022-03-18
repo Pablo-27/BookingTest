@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login en Booking" skipped="0" tests="1" time="66.67" timestamp="2022-03-18 09:14:31"><testcase name="Login exitoso"><failure message="NO SE HA PODIDO LOGUEAR EN LA PAGINA - Expected login validation&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">NO SE HA PODIDO LOGUEAR EN LA PAGINA - Expected login validation
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</failure><system-err>NO SE HA PODIDO LOGUEAR EN LA PAGINA - Expected login validation
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;&#13;
+stepdefinitions.LoginBookingStepDefinitions.deberiaEstarLogueado(LoginBookingStepDefinitions.java:22)&#13;
+✽.deberia estar logueado(file:///C:/Users/juan.marquez/eclipse-workspace/BookingTest/src/test/resources/features/loginBooking.feature:14)&#13;
+</system-err></testcase></testsuite>
